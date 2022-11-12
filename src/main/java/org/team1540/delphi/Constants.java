@@ -15,4 +15,7 @@ public final class Constants {
         public static final int rightRear = 7;
         public static final int rightRearSwerve = 8;
     }
+    public static final class Intake {
+        public static final int motor = 9;
+    }
 }
