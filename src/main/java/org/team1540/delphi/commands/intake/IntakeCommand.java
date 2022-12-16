@@ -4,14 +4,16 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 
 public class IntakeCommand extends CommandBase {
     private final Intake intake;
+    private final double speed;
 
-    public IntakeCommand(Intake intake) {
+    public IntakeCommand(Intake intake, double speed) {
         this.intake = intake;
+        this.speed = speed;
     }
 
     @Override
     public void initialize() {
-        intake.setPercent(0.3);
+        intake.setPercent(speed);
     }
 
     @Override

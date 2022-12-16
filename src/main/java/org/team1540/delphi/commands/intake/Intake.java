@@ -8,7 +8,7 @@ import org.team1540.delphi.Constants;
 public class Intake extends SubsystemBase {
     private final CANSparkMax intakeMotor = new CANSparkMax(Constants.Intake.motor, CANSparkMaxLowLevel.MotorType.kBrushless);
     public Intake() {
-        intakeMotor.setInverted(false);
+        intakeMotor.setInverted(true);
     }
 
     /**

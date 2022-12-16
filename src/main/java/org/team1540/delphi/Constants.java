@@ -24,12 +24,13 @@ public final class Constants {
     public static final double KP_DRIVE_VEL = 3.2925;
 
     public static final class Intake {
-        public static final int motor = 9;
+        public static final int motor = 8;
     }
 
     public static final class Elevator {
-        public static final int leftMotor = 10;
-        public static final int rightMotor = 11;
+        public static final int leftMotor = 6;
+        public static final int rightMotor = 7;
+        public static final double HOLD_SPEED= 0.094488;
     }
 
 }
