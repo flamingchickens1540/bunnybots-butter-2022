@@ -22,6 +22,7 @@ public class RobotContainer {
     Intake intake = new Intake();
     // Controllers
     XboxController driver = new XboxController(0);
+    XboxController copilot = new XboxController(1);
     // Commands
 
     public RobotContainer() {
@@ -34,7 +35,7 @@ public class RobotContainer {
         // Driver
 
 
-//        new Trigger(driver::getLeftBumper).whileActiveOnce(new IntakeCommand(intake)); //coop:button(LBumper,[HOLD] Intake,pilot)
+        new Trigger(driver::getLeftBumper).whileActiveOnce(new IntakeCommand(intake,0.5)); //coop:button(LBumper,[HOLD] Intake,pilot)
         new Trigger(driver::getAButton).whenActive(drivetrain::zeroGyroscope);
         // Copilot
 

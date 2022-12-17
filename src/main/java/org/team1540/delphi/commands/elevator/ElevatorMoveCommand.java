@@ -19,8 +19,8 @@ public class ElevatorMoveCommand extends CommandBase {
     @Override
     public void execute() {
         // TODO: Keep elevator stable with no input
-        elevator.setPercent((controller.getLeftTriggerAxis()-controller.getRightTriggerAxis())/1.5+SmartDashboard.getNumber("Elevator/holdSpeed", HOLD_SPEED));
-        System.out.println(controller.getLeftTriggerAxis());
+        elevator.setPercent((controller.getLeftTriggerAxis()-controller.getRightTriggerAxis())/1.5+SmartDashboard.getNumber("Elevator/holdSpeed", HOLD_SPEED)/2);
+         System.out.println(controller.getLeftTriggerAxis());
     }
 
     @Override
