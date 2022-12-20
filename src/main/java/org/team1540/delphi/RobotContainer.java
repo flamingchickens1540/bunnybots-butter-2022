@@ -35,7 +35,7 @@ public class RobotContainer {
         // Driver
 
 
-        new Trigger(driver::getLeftBumper).whileActiveOnce(new IntakeCommand(intake,0.5)); //coop:button(LBumper,[HOLD] Intake,pilot)
+        new Trigger(copilot::getLeftBumper).whileActiveOnce(new IntakeCommand(intake,0.5)); //coop:button(LBumper,[HOLD] Intake,pilot)
         new Trigger(driver::getAButton).whenActive(drivetrain::zeroGyroscope);
         // Copilot
 
@@ -44,10 +44,10 @@ public class RobotContainer {
     }
 
     public void setTeleopDefaultCommands() {
-        elevator.setDefaultCommand(new ElevatorMoveCommand(driver, elevator)); //coop:button(LTrigger,[HOLD] Elevator Down,pilot) coop:button(RTrigger,[HOLD] Elevator Up,pilot)
+        elevator.setDefaultCommand(new ElevatorMoveCommand(copilot, elevator)); //coop:button(LTrigger,[HOLD] Elevator Down,pilot) coop:button(RTrigger,[HOLD] Elevator Up,pilot)
         drivetrain.setDefaultCommand(new SwerveDriveCommand(drivetrain, driver));
-        new Trigger(driver::getLeftBumper).whileActiveOnce(new IntakeCommand(intake, 1));
-        new Trigger(driver::getRightBumper).whileActiveOnce(new IntakeCommand(intake, -1));
+        new Trigger(copilot::getLeftBumper).whileActiveOnce(new IntakeCommand(intake, 1));
+        new Trigger(copilot::getRightBumper).whileActiveOnce(new IntakeCommand(intake, -1));
     }
 
     private void initSmartDashboard() {
